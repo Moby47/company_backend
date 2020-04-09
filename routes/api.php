@@ -36,3 +36,6 @@ Route::get('/project-count', 'ProjectController@project_count')->middleware('aut
 
 //view all reviews
 Route::get('/reviews', 'ReviewController@index')->middleware('auth.apikey');
+
+//contact form
+Route::post('/contact', 'ContactController@contact');

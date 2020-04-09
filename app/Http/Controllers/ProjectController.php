@@ -17,7 +17,7 @@ class ProjectController extends Controller
     {
         //View all projects
         $projects = project::orderBy('id','desc')
-         ->select('id','name','url','image_name','created_at')
+         ->select('id','name','url','image_name')
          ->paginate(6);
 
         return ProjectRes::collection($projects);
