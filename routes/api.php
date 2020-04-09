@@ -31,7 +31,8 @@ Route::get('/posts/{id}/{slug?}', 'BlogController@show')->middleware('auth.apike
 
 //view all projects
 Route::get('/projects', 'ProjectController@index')->middleware('auth.apikey');
-
+//Counts projects
+Route::get('/project-count', 'ProjectController@project_count')->middleware('auth.apikey');
 
 //view all reviews
 Route::get('/reviews', 'ReviewController@index')->middleware('auth.apikey');

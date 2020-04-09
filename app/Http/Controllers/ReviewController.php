@@ -17,7 +17,7 @@ class ReviewController extends Controller
     {
         //View all reviews
         $reviews = review::orderBy('id','desc')
-         ->select('id','name','url','note','created_at')
+         ->select('id','name','url','note')
          ->paginate(6);
 
         return ReviewRes::collection($reviews);

@@ -22,4 +22,10 @@ class ProjectController extends Controller
 
         return ProjectRes::collection($projects);
     }
+
+    public function project_count()
+    {
+        //counts projects
+       return  $projects = project::all()->count();
+    }
 }
