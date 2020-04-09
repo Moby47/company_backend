@@ -24,14 +24,14 @@ Route::apiResource('/reviews', 'ReviewController');
 //Route::apiResource('/contact', 'ContactController');
 
 //view all blog posts
-Route::get('/posts', 'BlogController@index');
+Route::get('/posts', 'BlogController@index')->middleware('auth.apikey');
 //view a single post
-Route::get('/posts/{id}/{slug?}', 'BlogController@show');
+Route::get('/posts/{id}/{slug?}', 'BlogController@show')->middleware('auth.apikey');
 
 
 //view all projects
-Route::get('/projects', 'ProjectController@index');
+Route::get('/projects', 'ProjectController@index')->middleware('auth.apikey');
 
 
 //view all reviews
-Route::get('/reviews', 'ReviewController@index');
+Route::get('/reviews', 'ReviewController@index')->middleware('auth.apikey');
