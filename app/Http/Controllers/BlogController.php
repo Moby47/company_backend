@@ -16,7 +16,7 @@ class BlogController extends Controller
     public function index()
     {
         //View all blog posts
-        $posts = blogs::orderBy('id','desc')
+        $posts = blog::orderBy('id','desc')
          ->select('id','title','title_slug','image_name','description')
          ->paginate(6);
 
@@ -61,7 +61,7 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id,$slug)
+    public function show($id, $slug = null)
     {
         //View one blog post
         $post = blog::findorfail($id);
