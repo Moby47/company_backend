@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\blog;
-use App\Http\Resources\blogResource as BlogRes;
+use App\Http\Resources\BlogResource as BlogRes;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
