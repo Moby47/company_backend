@@ -17,7 +17,7 @@ class BlogController extends Controller
     {
         //View all blog posts
         $posts = blog::orderBy('id','desc')
-         ->select('id','title','title_slug','image_name','description')
+         ->select('id','title','title_slug','image_name','description','created_at')
          ->paginate(6);
 
         return BlogRes::collection($posts);

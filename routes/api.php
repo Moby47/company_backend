@@ -23,6 +23,15 @@ Route::apiResource('/projects', 'ProjectController');
 Route::apiResource('/reviews', 'ReviewController');
 //Route::apiResource('/contact', 'ContactController');
 
+//view all blog posts
 Route::get('/posts', 'BlogController@index');
-
+//view a single post
 Route::get('/posts/{id}/{slug?}', 'BlogController@show');
+
+
+//view all projects
+Route::get('/projects', 'ProjectController@index');
+
+
+//view all reviews
+Route::get('/reviews', 'ReviewController@index');
