@@ -11,7 +11,8 @@
         "guzzlehttp/guzzle": "^6.5",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "rdanusha/laravel-elastic-email": "^1.2"
+        "rdanusha/laravel-elastic-email": "^1.2",
+        "spatie/laravel-cors": "^1.6"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
