@@ -88,6 +88,9 @@ class BlogController extends Controller
         $result =blog::orderby('id','desc')->paginate(6);
         return view('home')->with('result',$result);
     }
+
+
+    
     /** NOT API
      * Delete the specified resource.
      *
@@ -106,7 +109,7 @@ class BlogController extends Controller
         Storage::delete('public/blog/'.$del->image_name);
     }
 
-    return redirect()->route('home')->with('deleted', 'Successful!');
+        return redirect()->route('home')->with('deleted', 'Successful!');
 
     }
 

@@ -100,12 +100,12 @@
                             <th>Action</th>
                         </tr>
                       
- 
- @foreach($result as $p)
+                    
+                    @foreach($result as $p)
                         <tr>
                             <td>{{$p->title}}</td>
                         <td> 
-                                <a href='/delete/{{$p->id}}'>Delete</a> 
+                           <a href='/delete/{{$p->id}}'>Delete</a> 
                         </td>
                         </tr>
 
@@ -116,9 +116,9 @@
                        {{$result->links()}}
 
                          @else
-										  <div class='alert alert-info text-center'>
-											No Post(s) Currently
-										  </div>
+					  <div class='alert alert-info text-center'>
+								No Post(s) Currently
+						  </div>
 									@endif
                     </div>
                 </div>

@@ -25,5 +25,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/create-post', 'BlogController@create_post')->name('create-post');
 Route::get('/get-post', 'BlogController@getPosts');
-
 Route::get('/delete/{id}', 'BlogController@deletePost')->name('delete-post');
