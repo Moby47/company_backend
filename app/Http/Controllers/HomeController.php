@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\blog;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $result =blog::orderby('id','desc')->paginate(6);
+        return view('home')->with('result',$result);
     }
 }
