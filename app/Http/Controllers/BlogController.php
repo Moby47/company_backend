@@ -84,13 +84,14 @@ class BlogController extends Controller
 
 
     //Not API
-    public function getPosts(){
+    public function getPosts()
+    {
         $result =blog::orderby('id','desc')->paginate(6);
         return view('home')->with('result',$result);
     }
 
 
-    
+
     /** NOT API
      * Delete the specified resource.
      *
