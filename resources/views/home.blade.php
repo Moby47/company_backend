@@ -135,8 +135,8 @@
     
                                 <div class="col-md-6">
                                     <textarea id="description"
-                             class="form-control" name="description" value="{{ old('description') }}"  autofocus>
-                                    </textarea>
+                             class="form-control" name="description" value="{{ old('description') }}"  autofocus 
+                             placeholder='you can html tags'></textarea>
 
                                     @if ($errors->has('description'))
                                         <span class="help-block">
@@ -173,6 +173,7 @@
 						@endif
     
                     <div class="panel-body">
+                            <div class='table-responsive'>
                        <table class='table'>
                             @if(count($result)>0)
                         <tr>
@@ -192,7 +193,7 @@
                         @endforeach
 
                        </table>
-
+</div>
                        {{$result->links()}}
 
                          @else
@@ -219,7 +220,7 @@
                         <div class="panel-body">
 
                                 <div class="">Project List</div>
-                                
+                                <div class='table-responsive'>
                            <table class='table'>
                                 @if(count($res)>0)
                             <tr>
@@ -242,7 +243,7 @@
     
                            </table>
     
-    
+                                </div>
                              @else
                           <div class='alert alert-info text-center'>
                                     No project(s) Currently
